@@ -172,7 +172,7 @@ ul {
     height: 50px;
     line-height: 50px;
     background: #47BFF1;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     color: #fff;
     cursor: pointer;
     display: none;
@@ -180,17 +180,32 @@ ul {
     z-index: 9999;
     border-radius: 50%;
   }
-  .up:hover {
+.up:hover {
     color: #47BFF1;
     background: #fff;
-    border: 1px solid #47BFF1;
-  }
-  .up:focus {
+    border: 2px solid #47BFF1;
+}
+.up:focus {
     outline: 0;
-  }
-  .slick-slide:focus {
+}
+.slick-slide:focus {
     outline: none;
-  }
+}
+.vbox-prev span,
+.vbox-next span {
+  border-top-color: #47BFF1 !important;
+  border-right-color: #47BFF1 !important;
+  border: 3px solid transparent;
+  width: 30px;
+  height: 30px;
+}
+.venobox {
+  outline: none;
+}
+.vbox-close {
+  right: 20px;
+  font-size: 40px;
+}
 /* Common CSS End ======================================== */
 
 /* Header Start ======================================== */

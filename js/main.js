@@ -32,4 +32,9 @@ $(document).ready(function () {
   var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 1000,
   });
+  $(".venobox").venobox({
+    spinner: "wandering-cubes",
+    closeColor: "#47BFF1",
+    spinColor: "#47BFF1"
+  });
 });
