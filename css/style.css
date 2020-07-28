@@ -7,6 +7,104 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
+/* Preloader Start ======================================== */
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    z-index: 9999999999999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  #preloader .loader {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-animation: animate 2s ease-in-out infinite;
+            animation: animate 2s ease-in-out infinite;
+  }
+  
+  #preloader .loader::before,
+  #preloader .loader::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 8px solid #4bcaff;
+    animation: load 2s ease-in-out infinite both reverse;
+  }
+  
+  #preloader .loader::after {
+    border-color: #fd7c00;
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+  }
+  
+  @-webkit-keyframes animate {
+    0%, 100% {
+      -webkit-transform: rotateX(8.75deg) rotateY(35deg);
+              transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+      -webkit-transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+              transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
+  }
+  
+  @keyframes animate {
+    0%, 100% {
+      -webkit-transform: rotateX(8.75deg) rotateY(35deg);
+              transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+      -webkit-transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+              transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
+  }
+  
+  @-webkit-keyframes load {
+    0%, 100% {
+      -webkit-transform: translateZ(25px) rotateX(14deg);
+              transform: translateZ(25px) rotateX(14deg);
+    }
+    33% {
+      -webkit-transform: translateZ(-25px) scale(0.4);
+              transform: translateZ(-25px) scale(0.4);
+    }
+    66% {
+      -webkit-transform: translateZ(-25px);
+              transform: translateZ(-25px);
+    }
+  }
+  
+  @keyframes load {
+    0%, 100% {
+      -webkit-transform: translateZ(25px) rotateX(14deg);
+              transform: translateZ(25px) rotateX(14deg);
+    }
+    33% {
+      -webkit-transform: translateZ(-25px) scale(0.4);
+              transform: translateZ(-25px) scale(0.4);
+    }
+    66% {
+      -webkit-transform: translateZ(-25px);
+              transform: translateZ(-25px);
+    }
+  }
+/* Preloader End ======================================== */
+
 /* Common CSS Start ======================================== */
 .container {
     width: 1170px;
@@ -42,7 +140,7 @@ ul {
     text-transform: uppercase;
     padding: 15px 44px;
     background: #4bcaff;
-    border-bottom: 3px solid #277697;
+    border: 2px solid #277697;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -57,7 +155,8 @@ ul {
 .btn:hover {
     background: transparent;
     color: #4bcaff;
-    border: 2px solid #4bcaff;
+    border-color: #4bcaff;
+    cursor: pointer;
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -88,6 +187,9 @@ ul {
   }
   .up:focus {
     outline: 0;
+  }
+  .slick-slide:focus {
+    outline: none;
   }
 /* Common CSS End ======================================== */
 
@@ -306,6 +408,25 @@ ul {
     color: #838383;
     line-height: 22px;
 }
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: #4bcaff;
+    cursor: pointer;
+    transition: .5s;
+}
+.gallery-prev {
+    left: -50px;
+}
+.gallery-next {
+    right: -50px;
+}
+.gallery-prev:hover,
+.gallery-next:hover {
+    color: #fd7c00;
+}
 /* Gallery End ======================================== */
 
 /* Technology Start ======================================== */
@@ -478,17 +599,17 @@ ul {
 #download .btn {
     color: #000;
 }
+#download .btn:hover {
+    transform: none !important;
+    color: #fff;
+}
 
 /* Download End ======================================== */
 
 /* Contact Start ======================================== */
 
 #contact {
-    background: url(../img/map.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 103px 0 113px;
+    position: relative;
 }
 #contact h2 {
     font-size: 36px;
@@ -497,6 +618,10 @@ ul {
     margin-bottom: 5px;
 }
 #contact .contact-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 330px;
     margin: auto;
     background: rgba(101, 206, 241, 0.8);

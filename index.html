@@ -6,10 +6,18 @@
     <title>Bazingar</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Prelaoder Start ========================================= -->
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Prelaoder End ========================================= -->
 
     <!-- Header Start ========================================= -->
     <header id="header">
@@ -23,13 +31,13 @@
                 <div class="menu">
                     <ul>
                         <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Galley</a></li>
-                        <li><a href="#">Video</a></li>
-                        <li><a href="#">Prices</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Download</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#gallery">Galley</a></li>
+                        <li><a href="#technology">Video</a></li>
+                        <li><a href="#price">Prices</a></li>
+                        <li><a href="#testimonial">Testimonials</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,11 +49,11 @@
 
     <section id="banner">
         <div class="row">
-            <div class="empty">
+            <div class="empty wow fadeInLeft">
                 <img src="img/hand.png" alt="">
             </div>
             <div class="banner-content-container">
-                <div class="banner-content">
+                <div class="banner-content wow fadeInUp">
                     <h1>Simple, Beautiful <span class="bold">and Amazing</span></h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
@@ -81,7 +89,7 @@
             </div>
             <div class="row">
                 <!-- Feature Item Start -->
-                <div class="feature-item">
+                <div class="feature-item wow fadeInLeft">
                     <div class="icon-image">
                         <img src="img/icon-1.png" alt="">
                     </div>
@@ -91,7 +99,7 @@
                         elerisque mi id faucibus iaculis vitae pulvinar.
                     </p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item wow fadeInUp">
                     <div class="icon-image">
                         <img src="img/icon-2.png" alt="">
                     </div>
@@ -101,7 +109,7 @@
                         elerisque mi id faucibus iaculis vitae pulvinar.
                     </p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item wow fadeInUp">
                     <div class="icon-image">
                         <img src="img/icon-3.png" alt="">
                     </div>
@@ -111,7 +119,7 @@
                         elerisque mi id faucibus iaculis vitae pulvinar.
                     </p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item wow fadeInRight">
                     <div class="icon-image">
                         <img src="img/icon-4.png" alt="">
                     </div>
@@ -135,8 +143,48 @@
                 <p>summarise what your product is all about</p>
             </div>
             <div class="galley-item-container">
-                <div class="row">
+                <div class="row gallery-slider">
                     <!-- Gallery Item Start -->
+                    <div class="gallery-item">
+                        <div class="screenshot-box">
+                            <img src="img/screenshot-1.png" alt="">
+                            <h5>Screenshot #1</h5>
+                        </div>
+                        <p>
+                            Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam
+                            elerisque mi id faucibus iaculis vitae pulvinar.
+                        </p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="screenshot-box">
+                            <img src="img/screenshot-2.png" alt="">
+                            <h5>Screenshot #1</h5>
+                        </div>
+                        <p>
+                            Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam
+                            elerisque mi id faucibus iaculis vitae pulvinar.
+                        </p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="screenshot-box">
+                            <img src="img/screenshot-3.png" alt="">
+                            <h5>Screenshot #1</h5>
+                        </div>
+                        <p>
+                            Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam
+                            elerisque mi id faucibus iaculis vitae pulvinar.
+                        </p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="screenshot-box">
+                            <img src="img/screenshot-4.png" alt="">
+                            <h5>Screenshot #1</h5>
+                        </div>
+                        <p>
+                            Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam
+                            elerisque mi id faucibus iaculis vitae pulvinar.
+                        </p>
+                    </div>
                     <div class="gallery-item">
                         <div class="screenshot-box">
                             <img src="img/screenshot-1.png" alt="">
@@ -212,8 +260,7 @@
             <!-- Price Table Start -->
             <div class="price-table-container">
                 <div class="row">
-                    <!-- Basic Start -->
-                    <div class="price-table basic">
+                    <div class="price-table basic wow slideInLeft">
                         <h4>Basic package</h4>
                         <h2>20$</h2>
                         <p>Nullam suscipit vitae</p>
@@ -221,8 +268,6 @@
                         <p>Vivamus viverra</p>
                         <a href="#" class="btn-price btn-basice">Purchase</a>
                     </div>
-                    <!-- Basic End -->
-                    <!-- Professional Start -->
                     <div class="price-table professional">
                         <h4>Professional package</h4>
                         <h2>25$</h2>
@@ -232,9 +277,7 @@
                         <p>Praesent pharetra</p>
                         <a href="#" class="btn-price btn-professional">Purchase</a>
                     </div>
-                    <!-- Professional End -->
-                    <!-- Advanced Start -->
-                    <div class="price-table advanced">
+                    <div class="price-table advanced wow slideInRight">
                         <h4>Advanced package</h4>
                         <h2>30$</h2>
                         <p>Nullam suscipit vitae</p>
@@ -242,7 +285,6 @@
                         <p>Vivamus viverra</p>
                         <a href="#" class="btn-price btn-advanced">Purchase</a>
                     </div>
-                    <!-- Advanced End -->
                 </div>
             </div>
             <!-- Price Table End -->
@@ -277,13 +319,18 @@
     <!-- Download Start ========================================= -->
     <section id="download">
         <h2>Do you like this app?</h2>
-        <a href="#"class="btn">Download Now</a>
+        <a href="#" class="btn">Download Now</a>
     </section>
     <!-- Download End ========================================= -->
 
     <!-- Contact Start ========================================= -->
     <section id="contact">
-        <div class="contact-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208795.4012144376!2d-118.02274538152624!3d35.145941642559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c229d213a60943%3A0x3458deb43bf50b32!2sCalifornia%20City%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1595916597621!5m2!1sen!2sbd"
+            width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0">
+        </iframe>
+        <div class="contact-container wow fadeIn">
             <h2>Contact</h2>
             <form action="#">
                 <input type="text" placeholder="Your Name" class="input-element">
@@ -321,9 +368,12 @@
 
     <!-- Script Files ========================================= -->
     <script src="js/jquery.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/smooth.js"></script>
     <script src="js/main.js"></script>
 
 
-
 </body>
+
 </html>
